@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Route::get('about', function() {
     return "<h1>About Page</h1>";
 });
+
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/contact', [ContactController::class, 'index']);
