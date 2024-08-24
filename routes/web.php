@@ -20,11 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about', function() {
-    return "<h1>About Page</h1>";
-});
 
-Route::get('/home', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/contact', [ContactController::class, 'index']);
-Route::resource('blog', BlogController::class);
+
+Route::get('/home', HomeController::class);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
