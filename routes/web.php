@@ -21,27 +21,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/home', function() {
-    $blogs = [
-            [
-                'title' => 'Title One',
-                'body' => 'This is a Body One'
-            ],
-            [
-                'title' => 'Title Two',
-                'body' => 'This is a Body Two'
-            ],
-            [
-                'title' => 'Title Three',
-                'body' => 'This is a Body Three'
-            ],
-            [
-                'title' => 'Title Four',
-                'body' => 'This is a Body Four'
-            ]
-        ];
-    return view('home', compact('blogs'));
-});
+Route::get('/home', HomeController::class);
 
 Route::get('about', function() {
     return view('about');
