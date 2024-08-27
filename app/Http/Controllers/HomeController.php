@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -16,7 +16,8 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
         //
-        $posts = Post::all();
+
+        return DB::table('posts')->where('id', '>', 10)->where('id', '<', 20)->get();
         return view('home', compact('blogs'));
     }
 }
