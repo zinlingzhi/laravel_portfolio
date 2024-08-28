@@ -16,7 +16,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // Insert the post into the database
         for ($i = 1; $i <= 100; $i++) {
 
             DB::table('posts')->insert(
