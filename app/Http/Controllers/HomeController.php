@@ -17,7 +17,20 @@ class HomeController extends Controller
     {
         //
 
-        return DB::table('posts')->where('id', '>', 10)->where('id', '<', 20)->get();
+        // return DB::table('posts')->where('id', '>', 10)->where('id', '<', 20)->get();
+        // return DB::table('posts')->pluck('title');
+
+        DB::table('posts')->insert(
+            [
+                'title' => 'This is a test data',
+                'description' => 'Lorem ipsum dolor sit, amet consectetur adipiscing elit. Dolores, est, assumenda totam molestiae nam repellendus officiis laboriosam blanditiis corrupti dicta illum quae consequatur unde. Saepe beatae perferendis blanditiis sapiente iste.',
+                'status' => 1,
+                'publish_date' => date('Y-m-d'),
+                'user_id' => 1
+            ]
+            );
+
+            dd('success');
         return view('home', compact('blogs'));
     }
 }
