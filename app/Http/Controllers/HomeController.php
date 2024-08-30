@@ -19,7 +19,7 @@ class HomeController extends Controller
 
         // return DB::table('posts')->where('id', '>', 10)->where('id', '<', 20)->get();
         // return DB::table('posts')->pluck('title');
-
+        // Return DB Manual Connection
         DB::table('posts')->insert(
             [
                 'title' => 'This is a test data',
