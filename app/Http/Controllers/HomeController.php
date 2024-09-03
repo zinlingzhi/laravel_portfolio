@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class HomeController extends Controller
 {
@@ -56,6 +58,8 @@ class HomeController extends Controller
         // Post::where('id', 3)->delete();
         // dd('success');
 
-        return Post::all();
+        // return Post::all();
+        // return Post::onlyTrashed()->get();
+        // return Post::withTrashed()->find(3)->restore();
     }
 }
