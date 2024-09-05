@@ -1,9 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-
+use Faker\Factory as Faker;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AddressSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class AddressSeeder extends Seeder
                 // Fake Address
                 $address = $faker->city;
 
-                DB::table('users')->insert(
+                DB::table('addresses')->insert(
                     [
                         'address' => $address,
                         'user_id' => $faker->numberBetween($min = 1, $max = 100)
