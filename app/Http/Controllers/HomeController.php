@@ -61,5 +61,9 @@ class HomeController extends Controller
         // return Post::all();
         // return Post::onlyTrashed()->get();
         // return Post::withTrashed()->find(3)->restore();
+
+        $users = User::all();
+
+        return $users;
     }
 }

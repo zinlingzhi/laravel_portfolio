@@ -18,7 +18,7 @@ class PostFactory extends Factory
     {
         return [
             //
-            'title' => fake()->title(),
+            'title' => fake()->sentence(),
             'description' => fake()->paragraph(),
             'status' => rand(0,1),
             'publish_date' => fake()->date(),
