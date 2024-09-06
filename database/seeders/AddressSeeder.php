@@ -15,7 +15,7 @@ class AddressSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // Fake Address
         $faker = Faker::create();
         for ($i = 1; $i <= 100; $i++) {
                 // Fake Address

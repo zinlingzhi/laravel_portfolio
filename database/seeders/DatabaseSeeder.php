@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // $this->call(PostSeeder::class);
+
+        // Fake Database
         Post::factory(200)->create();
     }
 }
