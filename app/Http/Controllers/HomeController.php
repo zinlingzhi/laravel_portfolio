@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -64,6 +65,7 @@ class HomeController extends Controller
 
         $users = User::all();
 
-        return $users;
+        // return $users;
+        return view('home', compact('users'));
     }
 }
