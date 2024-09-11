@@ -3,7 +3,7 @@
 @section('content')
 <!-- Main Content -->
 <main role="main" class="container">
-    <div class="row mt-5">
+    {{-- <div class="row mt-5">
         @foreach ($users as $user)
             <div class="col-md-4">
                 <div class="card">
@@ -15,6 +15,17 @@
                 </div>
             </div>
         @endforeach
+    </div> --}}
+    <div class="card-body">
+        <form action="{{route('upload-file')}}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="">Upload</label>
+                <input type="file" name="image" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
 </main>
 @endsection
